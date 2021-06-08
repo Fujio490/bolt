@@ -12,6 +12,7 @@
 
 .container {
   color: #333;
+  font-family: lato;
 }
 
 .width_set {
@@ -27,7 +28,7 @@
   position: fixed;
   background-color: #fff;
   z-index: 1;
-  padding: 15px;
+  padding: 15px 0;
 }
 
 .bolt_style {
@@ -44,11 +45,19 @@
   padding: 14px 12px;
   background-color: #74cfae;
   color: #fff;
+  transition: 0.3s;
 }
 
 .contact:hover {
-  transition: 0.3s;
   color: #333;
+}
+
+.header .sp_menu {
+  display: none;
+}
+
+.main {
+  padding-top: 60px;
 }
 
 .theme {
@@ -57,7 +66,6 @@
 
 .theme_inner {
   padding: 250px 0;
-  padding-top:calc(250px + 60px);
   text-align: center;
 }
 
@@ -85,13 +93,13 @@
 }
 
 .phone_picture {
-  margin: 0 80px;
+  margin-left: 60px;
 }
 
 .about_texts {
   color: #fff;
-  margin: 0 50px;
   margin-top: 30px;
+  margin-left: 80px;
   text-align: center;
   width: 780px;
 }
@@ -124,11 +132,11 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 40px;
 }
 
 .work_picture {
   margin-left: 100px;
-  margin-top: 40px;
   transition: 0.3s;
   opacity: 0.7;
 }
@@ -170,10 +178,10 @@
   font-size: 12px;
   padding: 14px 20px;
   margin-left: 90px;
+  transition: 0.3s;
 }
 
 .work_sub_email:hover {
-  transition: 0.3s;
   color: #333;
 }
 
@@ -226,6 +234,7 @@
   position: relative;
   width: 185px;
   height: 90px;
+  transition: 0.3s;
 }
 
 .icon_box:hover {
@@ -292,8 +301,9 @@
     margin-right: 50px;
   }
 
-  .work_picture:nth-child(4) {
-    margin-top: 80px;
+  .work_picture:nth-child(5),
+  .work_picture:nth-child(6) {
+    margin-top: 0;
   }
 
   .work_sub {
@@ -322,7 +332,24 @@
 
 @media screen and (max-width: 767px) {
   .inner {
-    width: 380px;
+    width: 360px;
+  }
+
+  .pc_menu {
+    display: none;
+  }
+
+  .header .sp_menu {
+    display: block;
+  }
+
+  .contact {
+    background-color: #fff;
+    color: #ddd;
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
   }
 
   .theme_inner {
@@ -350,5 +377,13 @@
     width: 100%;
   }
 
-  
+  .sns_inner {
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 0;
+  }
+
+  .icon_box {
+    width: 100%;
+  }
 }
