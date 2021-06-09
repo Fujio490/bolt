@@ -1,22 +1,8 @@
-/*使う色のメモ　あとで消す
-  テキスト色  #333
-  テーマ色    #74cfae
-  背景（薄）  #f2f2f2
-  背景（濃）  #4e4e4e */
-
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
-}
+@charset "UTF-8";
 
 .container {
   color: #333;
   font-family: lato;
-}
-
-.width_set {
-  width: 100%;
 }
 
 .inner {
@@ -24,11 +10,31 @@
   margin: 0 auto;
 }
 
+.button {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #74cfae;
+  color: #fff;
+  font-size: 12px;
+  transition: .3s;
+}
+
+.button:hover {
+  color: #333;
+}
+
 .header {
   position: fixed;
   background-color: #fff;
-  z-index: 1;
+  z-index: 1024;
   padding: 15px 0;
+  width: 100%;
+}
+
+.header_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .bolt_style {
@@ -38,18 +44,7 @@
 }
 
 .contact {
-  float: right;
-  display: inline-block;
-  text-decoration: none;
-  font-size: 12px;
   padding: 14px 12px;
-  background-color: #74cfae;
-  color: #fff;
-  transition: 0.3s;
-}
-
-.contact:hover {
-  color: #333;
 }
 
 .header .sp_menu {
@@ -57,7 +52,7 @@
 }
 
 .main {
-  padding-top: 60px;
+  padding-top: 70px;
 }
 
 .theme {
@@ -135,28 +130,29 @@
   margin-top: 40px;
 }
 
-.work_picture {
+.work_picture_box {
   margin-left: 100px;
+}
+
+.work_picture_box:nth-child(3n-2) {
+  margin-left: 0;
+}
+
+.work_picture_box:nth-child(3n) {
+  margin-right: 0;
+}
+
+.work_picture_box:nth-child(n+4) {
+  margin-top: 80px;
+}
+
+.work_picture {
   transition: 0.3s;
   opacity: 0.7;
 }
 
 .work_picture:hover {
   opacity: 1;
-}
-
-.work_picture:nth-child(3n-2) {
-  margin-left: 0;
-}
-
-.work_picture:nth-child(3n) {
-  margin-right: 0;
-}
-
-.work_picture:nth-child(4),
-.work_picture:nth-child(5),
-.work_picture:nth-child(6) {
-  margin-top: 80px;
 }
 
 .work_sub {
@@ -171,18 +167,8 @@
 }
 
 .work_sub_email {
-  display: inline-block;
-  text-decoration: none;
-  background-color: #74cfae;
-  color: #fff;
-  font-size: 12px;
   padding: 14px 20px;
   margin-left: 90px;
-  transition: 0.3s;
-}
-
-.work_sub_email:hover {
-  color: #333;
 }
 
 .skill {
@@ -205,11 +191,11 @@
   margin-top: 70px;
 }
 
-.skill_figure {
+.skill_figure_box {
   margin-left: 180px;
 }
 
-.skill_figure:first-child {
+.skill_figure_box:first-child {
   margin-left: 0;
 }
 
@@ -231,10 +217,14 @@
 }
 
 .icon_box {
+  text-decoration: none;
   position: relative;
   width: 185px;
   height: 90px;
   transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon_box:hover {
@@ -242,10 +232,6 @@
 }
 
 .sns_icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: #74cfae;
 }
 
@@ -285,25 +271,21 @@
     margin-top: 35px;
   }
 
-  .work_picture {
-    margin: 0 50px;
-  }
-
   .work_pictures {
     padding-top: 40px;
+    flex-direction: column;
   }
 
-  .work_picture:nth-child(3n-2) {
-    margin-left: 50px;
-  }
-  
-  .work_picture:nth-child(3n) {
-    margin-right: 50px;
+  .work_picture_box {
+    margin: 0;
   }
 
-  .work_picture:nth-child(5),
-  .work_picture:nth-child(6) {
+  .work_picture_box:nth-child(n+4) {
     margin-top: 0;
+  }
+
+  .work_picture_box:nth-child(3n+4) {
+    margin-top: 80px;
   }
 
   .work_sub {
@@ -320,12 +302,12 @@
     flex-direction: column;
   }
 
-  .skill_figure {
+  .skill_figure_box {
     margin-left: 0;
     margin-top: 88px;
   }
 
-  .skill_figure:first-child {
+  .skill_figure_box:first-child {
     margin-top: 0;
   }
 }
@@ -344,6 +326,7 @@
   }
 
   .contact {
+    text-align: center;
     background-color: #fff;
     color: #ddd;
     font-size: 20px;
