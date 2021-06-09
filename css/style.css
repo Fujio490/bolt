@@ -270,7 +270,6 @@
   }
 
   .work_pictures {
-    padding-top: 40px;
     flex-direction: column;
   }
 
@@ -346,7 +345,6 @@
   }
 
   .theme_sub {
-    padding-top: 20px;
     font-size: 30px;
   }
 
