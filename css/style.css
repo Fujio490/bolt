@@ -93,8 +93,7 @@
 
 .about_texts {
   color: #fff;
-  margin-top: 30px;
-  margin-left: 80px;
+  margin: 30px 0 0 80px;
   text-align: center;
   width: 780px;
 }
@@ -128,6 +127,7 @@
   justify-content: left;
   flex-wrap: wrap;
   margin-top: 40px;
+  font-size: 0;
 }
 
 .work_picture_box {
@@ -248,7 +248,7 @@
 
 @media screen and (max-width: 1199px) {
   .inner {
-    width: 740px;
+    width: 97%;
   }
 
   .about_inner {
@@ -261,12 +261,8 @@
   }
 
   .about_texts {
-    margin: 20px auto 25px auto;
+    margin: 20px auto 25px;
     width: 540px;
-  }
-
-  .about_text_body {
-    margin-top: 35px;
   }
 
   .work_pictures {
@@ -310,10 +306,6 @@
 }
 
 @media screen and (max-width: 767px) {
-  .inner {
-    width: 360px;
-  }
-
   .pc_menu {
     display: none;
   }
@@ -333,8 +325,7 @@
   }
 
   .theme_inner {
-    padding: 130px 0;
-    padding-top: 160px;
+    padding: 160px 0 130px;
     display: flex;
     flex-direction: column;
     justify-content: center;
